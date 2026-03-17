@@ -1,11 +1,31 @@
+import java.util.Scanner ;
 public class CheckPrime {
+        public static void main(String[] args) {
+                Scanner sc= new Scanner(System.in);
+                int n= sc.nextInt();
+                int temp=0;
+                if(n==1){
+                        temp=1;
+                        }
+                for (int i=2;i<n;i++){
+                        if(n%i==0){
+                               temp=1;
+                               break;
+                        }
+                        else{
+                                temp=0;
+                             
+                        }
+
+                }
+                if (temp==1) {
+                         System.out.println("Not Prime");
+                        
+                }
+                else{
+                         System.out.println("Prime");
+                }
+                sc.close();
+        }
    
-        // TODO: Read n
-        // TODO: Check if n is prime
-        // Hint:
-        // 1. If n <= 1, it is Not Prime.
-        // 2. Loop from 2 to sqrt(n). If n is divisible by any number, it is Not Prime.
-        // 3. Otherwise, it is Prime.
-        // TODO: Print "Prime" or "Not Prime"
-    
 }
